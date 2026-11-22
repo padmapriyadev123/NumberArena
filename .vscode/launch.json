@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug NUMBER_ARENA (Windows, MSYS2 UCRT64)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/NUMBER_ARENA.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "build NUMBER_ARENA"
+    },
+    {
+      "name": "Debug NUMBER_ARENA (Linux)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/NUMBER_ARENA",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "build NUMBER_ARENA"
+    }
+  ]
+}

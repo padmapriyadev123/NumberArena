@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build NUMBER_ARENA",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-std=c11", "-Wall", "-Wextra", "-g", "-Iinclude",
+        "main.c",
+        "src/ui.c", "src/scoring.c", "src/hints.c", "src/player.c",
+        "src/achievements.c", "src/leaderboard.c", "src/storage.c",
+        "src/game.c", "src/tournament.c",
+        "-o", "NUMBER_ARENA"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "run NUMBER_ARENA",
+      "type": "shell",
+      "command": "./NUMBER_ARENA",
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "build NUMBER_ARENA",
+      "problemMatcher": []
+    }
+  ]
+}
